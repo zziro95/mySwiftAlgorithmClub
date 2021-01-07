@@ -64,7 +64,7 @@ print(pDescription) // 좌표는: (0, 0)
 
 - `using CustomStringConvertible as a generic constraint is discouraged.`
 
- 우선 이 말의 의미는 제네릭의 제약 조건으로 `CustomStringConvertible`을 사용하는 것을 권장하지 않는다는 말인데
+ 이 말의 의미는 제네릭의 제약 조건으로 `CustomStringConvertible`을 사용하는 것을 권장하지 않는다는 말인데
 
 ```swift
 struct PointGeneric<T> {
@@ -85,7 +85,7 @@ print(pointGeneric) // 좌표는: (10, 10)
 
 위와 같이 사용하면 아무런 문제가 없다 그러나 `제네릭의 제약 조건으로 CustomStringConvertible 을 사용하지 말라는 말`은 아래의 상황처럼 쓰지 말라는것 같다.
 
-우선 제네릭에 제약조건은 `where`키워드를 이용해서 둘 수 있다는것을 알게 되었다.
+제네릭에 제약조건은 `where`키워드를 이용해서 둘 수 있다는것을 알게 되었다.
 
 ```swift
 struct PointGeneric<T>: CustomStringConvertible where T: CustomStringConvertible {
