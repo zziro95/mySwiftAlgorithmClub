@@ -127,15 +127,15 @@ let pointGeneric2 = PointGeneric(x: zziroType(name: "zziro"), y: zziroType(name:
 
 그래서 `Int`의 Definition으로 Jump 해봤습니다. 그곳에서 `CustomStringConvertible` 키워드를 찾아보니 `BinaryInteger`라는 프로토콜이 채택한 모습을 볼 수 있었어요.
 
-![Screen Shot 2021-01-07 at 11.50.16 PM](/Users/jinhochoi/Desktop/Screen Shot 2021-01-07 at 11.50.16 PM.png)
+![CustomStringConvertible3](image/CustomStringConvertible3.png "CustomStringConvertible3")
 
 그래서  `BinaryInteger` 프로토콜이  `CustomStringConvertible` 프로토콜 보다 뭔가 더 상위 개념의 프로토콜이라고 생각해서 추적해보았습니다. 추적해보니 상위 프로토콜로 추정되는 `FixedWidthInteger`라는 프로토콜이 채택하고 있더군요. 
 
-![Screen Shot 2021-01-07 at 11.45.38 PM](/Users/jinhochoi/Desktop/Screen Shot 2021-01-07 at 11.45.38 PM.png)
+![CustomStringConvertible1](image/CustomStringConvertible1.png "CustomStringConvertible1")
 
 한 번 더 추적해보니 `Int`가 `FixedWidthInteger` 프로토콜을 채택한다는 걸 확인해 볼 수 있었습니다.
 
-![Screen Shot 2021-01-07 at 11.46.32 PM](/Users/jinhochoi/Desktop/Screen Shot 2021-01-07 at 11.46.32 PM.png)
+![CustomStringConvertible2](image/CustomStringConvertible2.png "CustomStringConvertible2")
 
 `Int`라는 타입이 `FixedWidthInteger`를 채택하고, `FixedWidthInteger`이 `BinaryInteger`를 채택하고 `BinaryInteger`이  `CustomStringConvertible`를 채택함으로써 
 
